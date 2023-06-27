@@ -2,7 +2,7 @@
 
 //La pagina creara un numero aleatorio entre el 0 al 100, el jugador tendrá 5 intentos
 
-let numeroGenerado = parseInt(Math.random() *100);
+let numeroGenerado = parseInt(Math.random() * 100);
 
 console.log(numeroGenerado);
 
@@ -25,11 +25,23 @@ let correcto = false;
 
 while (intentosGastados < intentosMaximos && !correcto) {
   
+  numeroIngresado = prompt("ingrese un numero entre el 0 y el 100");
+
   intentosGastados++;
 
   if (numeroIngresado == numeroGenerado) {
     correcto = true;
   } else if (numeroIngresado < numeroGenerado) {
-    alert(``)
+    alert(`El numero ingresado es menor al correcto. \nTe queda ${intentosMaximos - intentosGastados} intentos`);
+  } else{
+    alert(`El numero ingresado es mayor al correcto. \nTe queda ${intentosMaximos - intentosGastados} intentos`);
   }
+}
+
+//Se termina el ciclo si: a) se adivino el numero, b) se acabaron los intentos
+
+if (correcto == true) {
+  alert(`Has ganadoooo, felicitaciones .....!!!!!`);
+} else {
+  alert(`Se te acabaron los intentos, perdiste`);
 }
