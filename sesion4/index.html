@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crack The Code</title>
+</head>
+<body>
+  <h1>Desarrollo Web - Sesion 4</h1>
+  
+  <h2>Mi formulario</h2>
+
+  <form>
+
+    <div>
+      <input type="text" placeholder="ingresa tu nombre">
+    </div>
+    <br>
+    <div>
+      <input type="text" placeholder="ingresa tu apellido">
+    </div>
+    <br>
+    <div>
+      <input type="email" placeholder="ingresa tu contraseña">
+    </div>
+    <br>
+    <div>
+      <button onclick="pepito()" id="miboton" type="button">Enviar 1</button>
+      <button id="miboton2" type="button">Enviar 2</button>
+    </div>
+  </form>
+
+  <script>
+
+    function pepito() {
+      alert("presionaste boton 1");
+    }
+
+
+    
+    //Paso1.- El boton guardarlo en una variable
+    let miboton = document.querySelector("#miboton2");
+    //Paso.- Darle un evento al boton
+    miboton.addEventListener("click",function(){
+      alert("presionaste boton 2");
+    });
+  </script>
+</body>
+</html>
