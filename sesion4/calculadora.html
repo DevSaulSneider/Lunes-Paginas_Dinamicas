@@ -9,19 +9,21 @@
   <h1>Mi Calculadora</h1>
 
   <form action="">
-    <div>
+
+    <div id="operandos">
       <input id="valor1" type="number" placeholder="Valor 1">
       <input id="valor2" type="number" placeholder="Valor 2">
+      
     </div>
 
     <div>
-      <button id="adicion" type="button">Adicion</button>
-      <button id="sustraccion" type="button">Sustraccion</button>
-      <button id="multiplicacion" type="button">Multiplicacion</button>
-      <button id="division" type="button">Division</button>
+      <button onclick="calcularSuma()" id="adicion" type="button">Adicion</button>
+      <button onclick="calcularResta()" id="sustraccion" type="button">Sustraccion</button>
+      <button onclick="calcularProducto()" id="multiplicacion" type="button">Multiplicacion</button>
+      <button onclick="calcularDivision()" id="division" type="button">Division</button>
     </div>
 
   </form>
-
+  <script src="assets/js/calculadora.js"></script>
 </body>
 </html>
