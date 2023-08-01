@@ -63,4 +63,16 @@ function drawGhost(x, y , color) {
   canvasSprites.lineTo(x - 0.5 * radius, y + 0.5 * width);  // Diagonal hacia arriba-izquierda
   canvasSprites.lineTo(x - radius, y + 0.75 * width);  // Diagonal hacia abajo-izquierda
   canvasSprites.lineTo(x - radius, y);  // Recta hacia arriba
+
+  canvasSprites.fillStyle = color;
+  canvasSprites.fill();
+
+  canvasSprites.beginPath();
+  canvasSprites.arc(x - 0.5 * radius, y, 0.12 * radius, 0, 2 * Math.PI);
+  canvasSprites.arc(x + 0.5 * radius, y, 0.12 * radius, 0, 2 * Math.PI);
+  canvasSprites.fillStyle = "black";
+  canvasSprites.fill();
 }
+
+drawPacman();
+drawGhost(10,10,"pink");
